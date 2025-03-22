@@ -7,7 +7,6 @@ import { useState } from "react"
 import { Modal } from "./ui/modal"
 import { LoadingSpinner } from "./loading-spinner"
 import { Button } from "./ui/button"
-import { CheckIcon } from "lucide-react"
 
 export const PaymentSuccessModal = () => {
   const router = useRouter()
@@ -72,7 +71,6 @@ export const PaymentSuccessModal = () => {
 
             <div className="mt-8 w-full">
               <Button onClick={handleClose} className="h-12 w-full">
-                <CheckIcon className="mr-2 size-5" />
                 Go to Dashboard
               </Button>
             </div>

@@ -4,13 +4,11 @@ import { buttonVariants } from "@/components/ui/button"
 import { Modal } from "@/components/ui/modal"
 import { cn } from "@/utils"
 import { UserButton } from "@clerk/nextjs"
-import { Gem, Home, Key, LucideIcon, Menu, Settings, X } from "lucide-react"
 import Link from "next/link"
 import { PropsWithChildren, useState } from "react"
 
 interface SidebarItem {
   href: string
-  icon: LucideIcon
   text: string
 }
 
@@ -22,19 +20,18 @@ interface SidebarCategory {
 const SIDEBAR_ITEMS: SidebarCategory[] = [
   {
     category: "Overview",
-    items: [{ href: "/dashboard", icon: Home, text: "Dashboard" }],
+    items: [{ href: "/dashboard", text: "Dashboard" }],
   },
   {
     category: "Account",
-    items: [{ href: "/dashboard/upgrade", icon: Gem, text: "Upgrade" }],
+    items: [{ href: "/dashboard/upgrade", text: "Upgrade" }],
   },
   {
     category: "Settings",
     items: [
-      { href: "/dashboard/api-key", icon: Key, text: "API Key" },
+      { href: "/dashboard/api-key", text: "API Key" },
       {
         href: "/dashboard/account-settings",
-        icon: Settings,
         text: "Account Settings",
       },
     ],
@@ -68,7 +65,6 @@ const Sidebar = ({ onClose }: { onClose?: () => void }) => {
                     )}
                     onClick={onClose}
                   >
-                    <item.icon className="size-4 text-zinc-500 group-hover:text-zinc-700" />
                     {item.text}
                   </Link>
                 ))}
@@ -114,7 +110,7 @@ const Layout = ({ children }: PropsWithChildren) => {
             onClick={() => setIsDrawerOpen(true)}
             className="text-gray-500 hover:text-gray-600"
           >
-            <Menu className="size-6" />
+            ☰
           </button>
         </div>
 
@@ -140,7 +136,7 @@ const Layout = ({ children }: PropsWithChildren) => {
               aria-label="Close modal"
               onClick={() => setIsDrawerOpen(false)}
             >
-              <X className="size-6" />
+              X
             </button>
           </div>
 

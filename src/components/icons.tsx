@@ -1,7 +1,5 @@
-import { LucideProps } from "lucide-react"
-
 export const Icons = {
-  discord: (props: LucideProps) => (
+  discord: (props: any) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 127.14 96.36"
@@ -13,7 +11,7 @@ export const Icons = {
       />
     </svg>
   ),
-  verificationBadge: (props: LucideProps) => {
+  verificationBadge: (props: any) => {
     return (
       <svg
         width="18"

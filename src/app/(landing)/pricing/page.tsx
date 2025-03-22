@@ -6,7 +6,6 @@ import { Button } from "@/components/ui/button"
 import { client } from "@/lib/client"
 import { useUser } from "@clerk/nextjs"
 import { useMutation } from "@tanstack/react-query"
-import { CheckIcon } from "lucide-react"
 import { useRouter } from "next/navigation"
 
 const Page = () => {
@@ -70,7 +69,6 @@ const Page = () => {
             <ul className="mt-8 grid grid-cols-1 gap-4 text-sm/6 text-gray-600 sm:grid-cols-2 sm:gap-6">
               {INCLUDED_FEATURES.map((feature) => (
                 <li key={feature} className="flex gap-3">
-                  <CheckIcon className="h-6 w-5 flex-none text-brand-700" />
                   {feature}
                 </li>
               ))}

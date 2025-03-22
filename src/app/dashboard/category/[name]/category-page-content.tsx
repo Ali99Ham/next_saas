@@ -8,7 +8,6 @@ import { useRouter, useSearchParams } from "next/navigation"
 import { client } from "@/lib/client"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Card } from "@/components/ui/card"
-import { ArrowUpDown, BarChart } from "lucide-react"
 import { isAfter, isToday, startOfMonth, startOfWeek } from "date-fns"
 
 import {
@@ -104,7 +103,6 @@ export const CategoryPageContent = ({
               }
             >
               Date
-              <ArrowUpDown className="ml-2 size-4" />
             </Button>
           )
         },
@@ -178,7 +176,7 @@ export const CategoryPageContent = ({
     searchParams.set("limit", pagination.pageSize.toString())
     router.push(`?${searchParams.toString()}`, { scroll: false })
   }, [pagination, router])
-  
+
   /**
    * END OF WHAT I FORGOT IN THE VIDEO
    */
@@ -252,7 +250,6 @@ export const CategoryPageContent = ({
             <p className="text-sm/6 font-medium">
               {field.charAt(0).toUpperCase() + field.slice(1)}
             </p>
-            <BarChart className="size-4 text-muted-foreground" />
           </div>
 
           <div>
@@ -293,7 +290,6 @@ export const CategoryPageContent = ({
             <Card className="border-2 border-brand-700">
               <div className="flex flex-row items-center justify-between space-y-0 pb-2">
                 <p className="text-sm/6 font-medium">Total Events</p>
-                <BarChart className="size-4 text-muted-foreground" />
               </div>
 
               <div>

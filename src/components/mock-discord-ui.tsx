@@ -1,22 +1,5 @@
 import { PropsWithChildren } from "react"
 import { Icons } from "./icons"
-import {
-  Cog,
-  Gift,
-  Headphones,
-  HelpCircle,
-  Inbox,
-  Menu,
-  Mic,
-  Phone,
-  Pin,
-  PlusCircle,
-  Search,
-  Smile,
-  Sticker,
-  UserCircle,
-  Video,
-} from "lucide-react"
 import Image from "next/image"
 
 export const MockDiscordUI = ({ children }: PropsWithChildren) => {
@@ -42,7 +25,7 @@ export const MockDiscordUI = ({ children }: PropsWithChildren) => {
         ))}
 
         <div className="group mt-auto size-12 bg-discord-background rounded-3xl flex items-center justify-center mb-3 hover:rounded-xl transition-all duration-200 hover:bg-[#3ba55c] cursor-not-allowed">
-          <PlusCircle className="text-[#3ba55c] group-hover:text-white" />
+          +
         </div>
       </div>
 
@@ -57,11 +40,9 @@ export const MockDiscordUI = ({ children }: PropsWithChildren) => {
         <div className="flex-1 overflow-y-auto pt-4">
           <div className="px-2 mb-4">
             <div className="flex items-center text-sm px-2 py-1.5 rounded hover:bg-[#393c43] text-[#dcddde] cursor-not-allowed">
-              <UserCircle className="mr-4 size-8 text-[#b9bbbe]" />
               <span className="font-medium text-sm">Friends</span>
             </div>
             <div className="flex items-center text-sm px-2 py-1.5 rounded hover:bg-[#393c43] text-[#dcddde] cursor-not-allowed">
-              <Inbox className="mr-4 size-8 text-[#b9bbbe]" />
               <span className="font-medium text-sm">Nitro</span>
             </div>
           </div>
@@ -104,12 +85,6 @@ export const MockDiscordUI = ({ children }: PropsWithChildren) => {
               @your_account
             </p>
           </div>
-
-          <div className="flex items-center space-x-2">
-            <Mic className="size-5 text-[#b9bbbe] hover:text-white cursor-pointer" />
-            <Headphones className="size-5 text-[#b9bbbe] hover:text-white cursor-pointer" />
-            <Cog className="size-5 text-[#b9bbbe] hover:text-white cursor-pointer" />
-          </div>
         </div>
       </div>
 
@@ -117,10 +92,6 @@ export const MockDiscordUI = ({ children }: PropsWithChildren) => {
       <div className="flex-1 flex flex-col">
         {/* dm header */}
         <div className="h-16 bg-[#36393f] flex items-center px-4 shadow-sm border-b border-[#202225]">
-          <div className="md:hidden mr-4">
-            <Menu className="size-6 text-[#b9bbbe] hover:text-white cursor-pointer" />
-          </div>
-
           <div className="flex items-center">
             <div className="relative">
               <Image
@@ -135,16 +106,6 @@ export const MockDiscordUI = ({ children }: PropsWithChildren) => {
 
             <p className="font-semibold text-white">PingPanda</p>
           </div>
-
-          <div className="ml-auto flex items-center space-x-4 text-[#b9bbbe]">
-            <Phone className="size-5 hover:text-white cursor-not-allowed hidden sm:block" />
-            <Video className="size-5 hover:text-white cursor-not-allowed hidden sm:block" />
-            <Pin className="size-5 hover:text-white cursor-not-allowed hidden sm:block" />
-            <UserCircle className="size-5 hover:text-white cursor-not-allowed hidden sm:block" />
-            <Search className="size-5 hover:text-white cursor-not-allowed hidden sm:block" />
-            <Inbox className="size-5 hover:text-white cursor-not-allowed hidden sm:block" />
-            <HelpCircle className="size-5 hover:text-white cursor-not-allowed hidden sm:block" />
-          </div>
         </div>
 
         {/* message history */}
@@ -155,18 +116,12 @@ export const MockDiscordUI = ({ children }: PropsWithChildren) => {
         {/* message input */}
         <div className="p-4">
           <div className="flex items-center bg-[#40444b] rounded-lg p-1">
-            <PlusCircle className="mx-3 text-[#b9bbbe] hover:text-white cursor-not-allowed" />
             <input
               readOnly
               type="text"
               placeholder="Message @PingPanda"
               className="flex-1 bg-transparent py-2.5 px-1 text-white placeholder-[#72767d] focus:outline-none cursor-not-allowed"
             />
-            <div className="flex items-center space-x-3 mx-3 text-[#b9bbbe]">
-              <Gift className="size-5 hover:text-white cursor-not-allowed hidden sm:block" />
-              <Sticker className="size-5 hover:text-white cursor-not-allowed hidden sm:block" />
-              <Smile className="size-5 hover:text-white cursor-not-allowed hidden sm:block" />
-            </div>
           </div>
         </div>
       </div>

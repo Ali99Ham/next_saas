@@ -6,7 +6,6 @@ import { Heading } from "@/components/heading"
 import { LoadingSpinner } from "@/components/loading-spinner"
 import { client } from "@/lib/client"
 import { useQuery } from "@tanstack/react-query"
-import { LucideProps } from "lucide-react"
 import { useRouter } from "next/navigation"
 import { useEffect } from "react"
 
@@ -43,7 +42,7 @@ const Page = () => {
   )
 }
 
-const BackgroundPattern = (props: LucideProps) => {
+const BackgroundPattern = (props: any) => {
   return (
     <svg
       width="768"
