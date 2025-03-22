@@ -2,6 +2,7 @@
 
 import { ReactNode } from "react"
 import { Button } from "./ui/button"
+import { ArrowLeft } from "lucide-react"
 import { Heading } from "./heading"
 import { useRouter } from "next/navigation"
 
@@ -31,7 +32,7 @@ export const DashboardPage = ({
                 className="w-fit bg-white"
                 variant="outline"
               >
-                Back
+                <ArrowLeft className="size-4" />
               </Button>
             )}
 

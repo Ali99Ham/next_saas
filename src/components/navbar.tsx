@@ -2,6 +2,7 @@ import Link from "next/link"
 import { MaxWidthWrapper } from "./max-width-wrapper"
 import { SignOutButton } from "@clerk/nextjs"
 import { Button, buttonVariants } from "./ui/button"
+import { ArrowRight } from "lucide-react"
 import { currentUser } from "@clerk/nextjs/server"
 
 export const Navbar = async () => {
@@ -31,11 +32,20 @@ export const Navbar = async () => {
                     className: "flex items-center gap-1",
                   })}
                 >
-                  Dashboard
+                  Dashboard <ArrowRight className="ml-1.5 size-4" />
                 </Link>
               </>
             ) : (
               <>
+                <Link
+                  href="/pricing"
+                  className={buttonVariants({
+                    size: "sm",
+                    variant: "ghost",
+                  })}
+                >
+                  Pricing
+                </Link>
                 <Link
                   href="/sign-in"
                   className={buttonVariants({
@@ -55,7 +65,7 @@ export const Navbar = async () => {
                     className: "flex items-center gap-1.5",
                   })}
                 >
-                  Sign up
+                  Sign up <ArrowRight className="size-4" />
                 </Link>
               </>
             )}

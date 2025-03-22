@@ -1,4 +1,5 @@
 import { cn } from "@/utils"
+import { Clock } from "lucide-react"
 import Image from "next/image"
 
 interface DiscordMessageProps {
@@ -84,6 +85,7 @@ export const DiscordMessage = ({
           ))}
 
           <p className="text-[#72767d] text-xs mt-2 flex items-center">
+            <Clock className="size-3 mr-1" />
             {timestamp}
           </p>
         </div>

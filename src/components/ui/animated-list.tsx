@@ -1,6 +1,13 @@
 "use client"
 
-import React, { ReactElement, ReactNode, useEffect, useState } from "react"
+import React, {
+  ReactElement,
+  ReactNode,
+  useEffect,
+  useMemo,
+  useState,
+} from "react"
+import { AnimatePresence, motion } from "framer-motion"
 
 export interface AnimatedListProps {
   className?: string
@@ -27,13 +34,13 @@ export const AnimatedList = React.memo(
 
     return (
       <div className={`flex flex-col-reverse items-center gap-4 ${className}`}>
-        {/* <AnimatePresence> */}
-        {messages.map((item) => (
-          <AnimatedListItem key={(item as ReactElement).key}>
-            {item}
-          </AnimatedListItem>
-        ))}
-        {/* </AnimatePresence> */}
+        <AnimatePresence>
+          {messages.map((item) => (
+            <AnimatedListItem key={(item as ReactElement).key}>
+              {item}
+            </AnimatedListItem>
+          ))}
+        </AnimatePresence>
       </div>
     )
   }
@@ -50,8 +57,8 @@ export function AnimatedListItem({ children }: { children: React.ReactNode }) {
   }
 
   return (
-    <div {...animations} className="mx-auto w-full">
+    <motion.div {...animations} layout className="mx-auto w-full">
       {children}
-    </div>
+    </motion.div>
   )
 }
