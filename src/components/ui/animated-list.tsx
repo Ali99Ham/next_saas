@@ -1,12 +1,6 @@
 "use client"
 
-import React, {
-  ReactElement,
-  ReactNode,
-  useEffect,
-  useMemo,
-  useState,
-} from "react"
+import React, { ReactElement, ReactNode, useEffect, useState } from "react"
 
 export interface AnimatedListProps {
   className?: string

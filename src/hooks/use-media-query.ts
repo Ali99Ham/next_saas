@@ -4,7 +4,7 @@ export const useMediaQuery = () => {
   const [device, setDevice] = useState<"mobile" | "tablet" | "desktop" | null>(
     null
   )
-
+  //@ts-ignore
   const [dimensions, setDimensions] = useState<{
     width: number
     height: number
